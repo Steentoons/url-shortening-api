@@ -1,23 +1,41 @@
 import React from 'react'
 import "../styles/shortenUrlInput.css"
 
-const ShortenUrlInput = () => {
+// Setting the props interface...
+interface ShortenUrlInputProps {
+  setLongURL: React.Dispatch<React.SetStateAction<string>>
+    
+  }
+
+// ShortenUrlInput Component...
+const ShortenUrlInput: React.FC<ShortenUrlInputProps> = (props: ShortenUrlInputProps) => {
 
   const shortenUrlHandler = (): void => {
     // Validate the form input...
     const myInput = document.querySelector("input")!
+    const inputErrorDiv = document.getElementById('inputError')!
     const myInputVal:string = myInput.value
 
     if(myInputVal === "" ) {
-      console.log(`The Error is`)
+      console.log()
+      inputErrorDiv.innerHTML = "Sorry, enter your url first..."
+
+      return
+    } else {
+      inputErrorDiv.innerHTML = ""
+
+      // Invoke the api call via state change...
+      props.setLongURL(myInputVal)
     }
-    // Invoke the spi call via state change...
 
     return
   }
   return (
     <div className='shorten-url-input-container'>
-      <input type="text" placeholder="Shorten a link here"/>
+      <div className="shorten-url-input-div">
+        <input type="text" id="myURL" />
+        <div id='inputError' className="shorten-url-input-error"></div>
+      </div>
       <button onClick={() => shortenUrlHandler()}>Shorten It!</button>
     </div>
   )
