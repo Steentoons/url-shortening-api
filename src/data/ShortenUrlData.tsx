@@ -5,6 +5,20 @@ const axios = require("axios");
 
 interface ShortenUrlDataProps {
   longURL: string;
+  setShortUrlList: React.Dispatch<React.SetStateAction<string[]>>;
+  shortUrlList: string[];
+}
+
+type ResponseShortLink = {
+  full_short_link: string
+}
+
+type ResponseResult = {
+  result: ResponseShortLink
+}
+
+type ResponseData = {
+  data: ResponseResult
 }
 
 const ShortenUrlData: React.FC<ShortenUrlDataProps> = (
@@ -15,14 +29,18 @@ const ShortenUrlData: React.FC<ShortenUrlDataProps> = (
       const newURL = "https://api.shrtco.de/v2/shorten?url=" + props.longURL;
       axios
         .get(newURL)
-        .then((response: String) => {
-          console.log(response);
+        .then((response: ResponseData) => {
+          const newShortUrl = response.data.result.full_short_link
+          // Push all links to state...
+          props.setShortUrlList([
+            ...props.shortUrlList, newShortUrl
+          ])
         })
         .catch((error: String) => {
           console.log(error);
         })
         .then(() => {
-          console.log("This was called...");
+          // This will always execute...
         });
     }
   }, [props.longURL]);
