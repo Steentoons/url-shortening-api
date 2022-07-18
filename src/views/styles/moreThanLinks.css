@@ -1,0 +1,50 @@
+.more-than-links-container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 140px;
+    /* background: red; */
+}
+
+.more-than-links-content-button button {
+    background: #2BD1D1;
+    border-radius: 34px;
+    padding: 14px 30px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: poppins-bold;
+    color: #FFFFFF;
+}
+
+.more-than-links-content-button button:hover {
+    background: #9EE0E3;
+}
+
+.more-than-links-content-title {
+    font-family: poppins-bold;
+    font-size: 78px;
+    line-height: 91px;
+    color: #34313C;
+    width: 702px;
+}
+
+.more-than-links-content-desc {
+    font-size: 23px;
+    line-height: 34px;
+    width: 554px;
+    color: #9C9BA0;
+}
+
+.more-than-links-image img {
+    width: 500px;
+}
+
+@media screen and (max-width: 1058px) {
+    .more-than-links-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
