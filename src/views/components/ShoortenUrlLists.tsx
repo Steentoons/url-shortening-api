@@ -21,14 +21,14 @@ const ShoortenUrlLists: React.FC<ShoortenUrlListsProps> = (props: ShoortenUrlLis
     
     const printedUrls = props.shortUrlList.map((item, index) => {
         return (
-            <div key={index}>
+            <div className='shorten-url-input-lists-div' key={index}>
                 <div>{item}</div>
                 <button onClick={(e) => {copyToClipboardFn(e)}}>Copy</button>
             </div>
         )
     })
   return (
-    <div>
+    <div className='shorten-url-input-lists-container'>
         {printedUrls}
     </div>
   )
