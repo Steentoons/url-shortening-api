@@ -1,0 +1,82 @@
+.advanced-statistics-container {
+    width: 100%;
+    max-width: 1440px;
+}
+
+.advanced-statistics-content-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.advanced-statistics-content-title {
+    font-size: 40px;
+    line-height: 60px;
+    color: #36333E;
+    font-family: poppins-bold;
+    width: 450px;
+    margin: 0 auto;
+}
+
+.advanced-statistics-content-desc {
+    font-size: 18px;
+    line-height: 31px;
+    text-align: center;
+    color: #9D9DA5;
+    width: 516px;
+    margin: 0 auto;
+}
+
+.advanced-statistics-data-wrapper {
+    width: 100%;
+    display: flex;
+    margin-top: 70px;
+}
+
+.advanced-statistics-card-container {
+    width: 350px;
+    background-color: white;
+    padding: 20px;
+    margin-right: 32px;
+}
+
+.advanced-statistics-card-container:nth-child(1) {
+    margin-top: 0;
+}
+
+.advanced-statistics-card-container:nth-child(2) {
+    margin-top: 50px;
+}
+
+.advanced-statistics-card-container:nth-child(3) {
+    margin-top: 100px;
+}
+
+.advanced-statistics-card-container:last-child {
+    margin-right: 0;
+}
+
+.advanced-statistics-card-icon-wrapper {
+    position: relative;
+}
+
+.advanced-statistics-card-icon-wrapper img {
+    width: 92px;
+    height: 92px;
+    position: absolute;
+    margin-top: -70px;
+}
+
+.advanced-statistics-card-title {
+    font-size: 22px;
+    line-height: 33px;
+    color: #36333E;
+    font-family: poppins-bold;
+    margin-top: 50px;
+}
+
+.advanced-statistics-card-desc {
+    font-size: 16px;
+    line-height: 28px;
+    color: #9D9DA5;
+    margin-top: 25px;
+}

@@ -1,0 +1,78 @@
+.middle-section-wrapper-container {
+    width: 100%;
+    max-width: 1440px;
+    background: #F0F1F6;
+    padding: 80px 168px 0;
+}
+
+.shorten-url-input-container {
+    width: 100%;
+    position: relative;
+}
+
+.shorten-url-input-wrapper {
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 172px;
+    background-image: url(../../assets/images/desktop\ bg.png);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: -170px;
+}
+
+.shorten-url-input-div {
+    min-width: 0;
+    width: 100%;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.shorten-url-input-div input {
+    width: 100%;
+    background: #FFFFFF;
+    border: 4px solid #DB6B73;
+    border-radius: 5px;
+    font-size: 23px;
+    line-height: 34px;
+    color: rgba(223, 126, 132, 0.6);
+    padding: 5px;
+}
+
+.shorten-url-input-error-wrapper {
+    position: relative;
+    height: 0;
+}
+
+.shorten-url-input-error-wrapper .shorten-url-input-error {
+    width: 100%;
+    position: absolute;
+    font-size: 16px;
+    line-height: 24px;
+    color: #DF7E84;
+    z-index: +2;
+}
+
+.shorten-url-input-button-wrapper button {
+    background: #2BD1D1;
+    border-radius: 10px;
+    padding: 14px 30px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: poppins-bold;
+    color: #FFFFFF;
+}
+
+.shorten-url-input-lists-container {
+    width: 100%;
+}
+
+.shorten-url-input-button-wrapper button:hover {
+    background: #9EE0E3;
+}
