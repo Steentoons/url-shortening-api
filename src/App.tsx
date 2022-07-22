@@ -3,6 +3,7 @@ import Header from "./views/components/Header"
 import MoreThanLinks from './views/components/MoreThanLinks';
 import MiddleSectionWrapper from './views/components/MiddleSectionWrapper';
 import BoostLinks from './views/components/BoostLinks';
+import Footer from './views/components/Footer';
 import "./views/styles/main.css"
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
     <MoreThanLinks />
     <MiddleSectionWrapper longURL={longURL} setLongURL={setLongURL} shortUrlList={shortUrlList} setShortUrlList={setShortUrlList} />
     <BoostLinks />
+    <Footer />
   </div>;
 };
 
