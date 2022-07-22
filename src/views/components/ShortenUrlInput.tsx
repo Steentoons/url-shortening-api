@@ -5,6 +5,7 @@ import "../styles/shortenUrlInput.css";
 // Setting the props interface...
 interface ShortenUrlInputProps {
   setLongURL: React.Dispatch<React.SetStateAction<string>>;
+  setShortenButtonClicked: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 // ShortenUrlInput Component...
@@ -18,7 +19,6 @@ const ShortenUrlInput: React.FC<ShortenUrlInputProps> = (
     const myInputVal: string = myInput.value;
 
     if (myInputVal === "") {
-      console.log();
       inputErrorDiv.innerHTML = "Sorry, enter your url first...";
 
       return;
@@ -26,6 +26,7 @@ const ShortenUrlInput: React.FC<ShortenUrlInputProps> = (
       inputErrorDiv.innerHTML = "";
 
       // Invoke the api call via state change...
+      props.setShortenButtonClicked(true)
       props.setLongURL(myInputVal);
     }
 

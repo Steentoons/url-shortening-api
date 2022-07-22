@@ -7,6 +7,10 @@
     /* background: red; */
 }
 
+.more-than-links-content-button {
+    margin-top: 40px;
+}
+
 .more-than-links-content-button button {
     background: #2BD1D1;
     border-radius: 34px;

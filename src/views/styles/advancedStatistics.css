@@ -1,6 +1,7 @@
 .advanced-statistics-container {
     width: 100%;
     max-width: 1440px;
+    margin-top: 120px;
 }
 
 .advanced-statistics-content-wrapper {
@@ -37,6 +38,7 @@
     background-color: white;
     padding: 20px;
     margin-right: 32px;
+    height: 264px;
 }
 
 .advanced-statistics-card-container:nth-child(1) {

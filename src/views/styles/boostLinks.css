@@ -1,0 +1,37 @@
+.boost-links-container {
+    width: 100%;
+    max-width: 1440px;
+    background-image: url(../../assets/images/boost\ links\ bg.png);
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boost-links-title {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    line-height: 60px;
+    color: #FFFFFF;
+    font-family: poppins-bold;
+    margin-bottom: 30px;
+}
+
+.boost-links-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.boost-links-button button {
+    background: #9EE0E3;
+    border-radius: 34px;
+    border: 0;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family: poppins-bold;
+    padding: 15px 40px;
+}
