@@ -48,7 +48,18 @@
 
 @media screen and (max-width: 1058px) {
     .more-than-links-container {
+        width: 100%;
         flex-direction: column-reverse;
+        padding: 0 25px;
+    }
+    .more-than-links-image {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .more-than-links-content-wrapper {
+        display: flex;
         align-items: center;
+        flex-direction: column;
+        text-align: center;
     }
 }

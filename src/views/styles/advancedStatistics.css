@@ -82,3 +82,31 @@
     color: #9D9DA5;
     margin-top: 25px;
 }
+
+@media screen and (max-width: 1400px) {
+    .advanced-statistics-card-container {
+        min-height: 350px;
+    }
+    .middle-section-wrapper-container {
+        padding: 80px 25px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .advanced-statistics-data-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .advanced-statistics-card-container {
+        margin: 0;
+    }
+    .advanced-statistics-card-container:nth-child(1),
+    .advanced-statistics-card-container:nth-child(2),
+    .advanced-statistics-card-container:nth-child(3) {
+        margin: 0;
+    }
+    .advanced-statistics-card-container:nth-child(2),
+    .advanced-statistics-card-container:nth-child(3) {
+        margin-top: 100px;
+    }
+}
