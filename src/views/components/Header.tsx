@@ -10,7 +10,15 @@ const Header = () => {
 
     const printMenuState = menuOpen ? (
         <div className="header-menu-div">
-            Menu
+            <ul>
+              <li>Features</li>
+              <li>Pricing</li>
+              <li>Resources</li>
+              <li>Login</li>
+              <li>
+                <button>Sign Up</button>
+              </li>
+            </ul>
         </div>
     ) : ""
   return (

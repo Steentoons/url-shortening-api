@@ -15,11 +15,66 @@
 .header-menu-wrapper {
     position: relative;
     width: 100%;
+    display: none;
+    box-sizing: border-box;
 }
 
 .header-menu-div {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 25px;
+}
+
+.header-menu-div ul {
+    padding: 0;
+    margin: 0;
     width: 100%;
     background: #3A3053;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+.header-menu-div ul li {
+    font-family: poppins-bold;
+    font-size: 20px;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+.header-menu-div ul li:hover {
+    color: #2BD1D1;
+}
+
+.header-menu-div ul li:nth-child(3) {
+    border-bottom: solid rgba(255, 255, 255, 0.2) 1px;
+    padding-bottom: 32px;
+}
+
+.header-menu-div ul li:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-menu-div ul li:last-child button {
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    font-family: poppins-bold;
+    font-size: 20px;
+    border-radius: 35px;
+    color: white;
+    padding: 10px 0;
+    background: #2BD1D1;
+}
+
+.header-menu-div ul li:last-child button:hover {
+    background: #9EE0E3;
 }
 
 .header-section-one {
@@ -80,6 +135,12 @@
 }
 
 @media screen and (max-width: 1058px) {
+    .header-wrapper {
+        padding: 0 25px;
+    }
+    .header-menu-wrapper {
+        display: block;
+    }
     .header-section-two-mobile {
         display: flex;
         height: 136px;
