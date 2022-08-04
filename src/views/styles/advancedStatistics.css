@@ -83,6 +83,38 @@
     margin-top: 25px;
 }
 
+.advanced-statistics-card-dash-mobile {
+    position: relative;
+    display: none;
+}
+
+.advanced-statistics-card-dash-desktop {
+    position: relative;
+    display: block;
+}
+
+.advanced-statistics-card-container:nth-child(2) .dash-desktop {
+    position: absolute;
+    width: 32px;
+    height: 7px;
+    background: #2BD0CF;
+    margin-left: -52px;
+    margin-top: 50px;
+}
+
+.advanced-statistics-card-container:nth-child(3) .dash-desktop {
+    position: absolute;
+    width: 32px;
+    height: 7px;
+    background: #2BD0CF;
+    margin-left: -52px;
+}
+
+
+/* .dash-desktop:first-child {
+    display: none;
+} */
+
 @media screen and (max-width: 1400px) {
     .advanced-statistics-card-container {
         min-height: 350px;
@@ -108,6 +140,34 @@
     .advanced-statistics-card-container:nth-child(2),
     .advanced-statistics-card-container:nth-child(3) {
         margin-top: 100px;
+    }
+    .advanced-statistics-card-dash-mobile {
+        position: relative;
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+    .advanced-statistics-card-dash-desktop {
+        position: relative;
+        display: none;
+    }
+    .advanced-statistics-card-icon-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .advanced-statistics-card-container:nth-child(1) .dash-mobile {
+        position: absolute;
+        width: 7px;
+        height: 57px;
+        background: #2BD0CF;
+        margin-top: 138px;
+    }
+    .advanced-statistics-card-container:nth-child(2) .dash-mobile {
+        position: absolute;
+        width: 7px;
+        height: 57px;
+        background: #2BD0CF;
+        margin-top: 110px;
     }
 }
 

@@ -12,10 +12,14 @@ const AdvancedStatisticsCard: React.FC<AdvancedStatisticsCardProps> = (props:Adv
         <div className="advanced-statistics-card-icon-wrapper">
             <img src={props.img} alt={props.title} />
         </div>
-        <div className="advanced-statistics-card-dash-desktop"></div>
+        <div className="advanced-statistics-card-dash-desktop">
+          <div className="dash-desktop"></div>
+        </div>
         <div className="advanced-statistics-card-title">{props.title}</div>
         <div className="advanced-statistics-card-desc">{props.desc}</div>
-        <div className="advanced-statistics-card-dash-mobile"></div>
+        <div className="advanced-statistics-card-dash-mobile">
+        <div className="dash-mobile"></div>
+        </div>
     </div>
   )
 }
