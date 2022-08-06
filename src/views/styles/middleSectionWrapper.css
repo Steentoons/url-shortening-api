@@ -100,7 +100,7 @@
 
 .shorten-url-input-list-second-wrapper {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     width: 40%;
 }
@@ -213,9 +213,6 @@
         box-sizing: border-box;
         width: 100%;
         margin-top: 10px;
-    }
-    .shorten-url-input-lists-div button {
-        background-color: red;
     }
     .shorten-url-input-lists-div .long-url,
     .shorten-url-input-lists-div .short-url {
