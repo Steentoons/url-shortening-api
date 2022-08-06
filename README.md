@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Frontend Mentor - Shortly URL shortening API Challenge solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View the optimal layout for the site depending on their device's screen size
+- Shorten any valid URL
+- See a list of their shortened links, even after refreshing the browser
+- Copy the shortened link to their clipboard in a single click
+- Receive an error message when the `form` is submitted if:
+  - The `input` field is empty
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Links
 
-### `npm run build`
+- Solution URL: [Frontend Mentor Solution](https://your-solution-url.com)
+- Live Site URL: [Live Site](https://url-shortening-api-sable.vercel.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## My process
+I actually started off without any CSS, no aesthetics. Setting up my file system depending on the problem and building myself on top of that. I did the HTML and Javascript first, made sure all the functionalities are working fine. After the project was fully functional without CSS, I then refactored my code to be more readable before adding CSS with a desktop-first approach.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Built with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ReactJs
+- Typescript
+- HTML
+- CSS
+- React Functional Components with Hooks
+- Axios
 
-### `npm run eject`
+### What I learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I increased my knowledge and experience on API calls and JSON manipulations. I consumed the Shorten API and managed to change the views on the site using react states and hooks. I also learnt how to follow a premade design to the letter to the very pixel perfect relults anticipated.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I finally understood how to persist the states on site reload using `localStorage`. Before, I had managed to store the data in the `localStorage`, only to reset it on browser refresh. Turned out that I was reseting the data during initialization. To solve this, according to an answer in stack overflow, use another variable to initiate the state, and parse it as the state default value.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+// Instead of this...
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+// you're creating a state variable with an empty array
+   const [shortUrlList, setShortUrlList] = useState<ShortUrlListObj[]>([])
 
-## Learn More
+// Do this...
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+// @ts-ignore
+  const storeShortUrlList = JSON.parse(localStorage.getItem("shortUrlList") || [])
+  // @ts-ignore
+  const [shortUrlList, setShortUrlList] = useState<ShortUrlListObj[]>(storeShortUrlList) 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  // Not yet found a better solution to remove the @ts-ignore though...
+```
 
-### Code Splitting
+### Continued development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I loved using Typescript. This is the first time to actually use it in a project, but it was definately worth a shot. I will use it in almost all my future projects going forward.
 
-### Analyzing the Bundle Size
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [Stackoverflow answer on state persist](https://stackoverflow.com/questions/64903227/local-storage-keeps-resetting-on-page-reload) - This helped me to finally somlve a bug on state persisting that will definately employ on my future projects
 
-### Making a Progressive Web App
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Website - [steentoons](https://vercel.com/steentoons/portfolio)
+- Frontend Mentor - [@steentoons](https://www.frontendmentor.io/profile/steentoons)
+- Linkedin - [@steentoons](https://www.linkedin.com/in/steen-toons/)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
