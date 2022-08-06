@@ -10,6 +10,7 @@ const App = () => {
   type ShortUrlListObj = {
     newLongUrl: string
     newShortUrl: string
+    copyState: boolean
   }
   
   const [longURL, setLongURL] = useState<string>("")

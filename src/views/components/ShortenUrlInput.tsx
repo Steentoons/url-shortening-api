@@ -12,26 +12,7 @@ interface ShortenUrlInputProps {
 const ShortenUrlInput: React.FC<ShortenUrlInputProps> = (
   props: ShortenUrlInputProps
 ) => {
-  const shortenUrlHandler = (): void => {
-    // Validate the form input...
-    const myInput = document.querySelector("input")!;
-    const inputErrorDiv = document.getElementById("inputError")!;
-    const myInputVal: string = myInput.value;
-
-    if (myInputVal === "") {
-      inputErrorDiv.innerHTML = "Sorry, enter your url first...";
-
-      return;
-    } else {
-      inputErrorDiv.innerHTML = "";
-
-      // Invoke the api call via state change...
-      props.setShortenButtonClicked(true)
-      props.setLongURL(myInputVal);
-    }
-
-    return;
-  };
+  
   return (
     <div className="shorten-url-input-container">
       <div className="shorten-url-input-wrapper">
@@ -42,7 +23,7 @@ const ShortenUrlInput: React.FC<ShortenUrlInputProps> = (
           </div>
         </div>
         <div
-          onClick={() => shortenUrlHandler()}
+          onClick={() => shortenUrlHandler(props.setShortenButtonClicked, props.setLongURL)}
           className="shorten-url-input-button-wrapper"
         >
           <Button content="Shorten It!" background={true} />
@@ -53,3 +34,24 @@ const ShortenUrlInput: React.FC<ShortenUrlInputProps> = (
 };
 
 export default ShortenUrlInput;
+
+const shortenUrlHandler = (setShortenButtonClicked: any, setLongURL: any): void => {
+  // Validate the form input...
+  const myInput = document.querySelector("input")!;
+  const inputErrorDiv = document.getElementById("inputError")!;
+  const myInputVal: string = myInput.value;
+
+  if (myInputVal === "") {
+    inputErrorDiv.innerHTML = "Sorry, enter your url first...";
+
+    return;
+  } else {
+    inputErrorDiv.innerHTML = "";
+
+    // Invoke the api call via state change...
+    setShortenButtonClicked(true)
+    setLongURL(myInputVal);
+  }
+
+  return;
+};

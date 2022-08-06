@@ -6,6 +6,7 @@ const axios = require("axios");
 type ShortUrlListObj = {
   newLongUrl: string
   newShortUrl: string
+  copyState: boolean
 }
 
 interface ShortenUrlDataProps {
@@ -44,7 +45,7 @@ const ShortenUrlData: React.FC<ShortenUrlDataProps> = (
           const newLongUrl = response.data.result.original_link
 
           // Push all links to state...
-          const newShortUrlObj = {newLongUrl, newShortUrl}
+          const newShortUrlObj = {newLongUrl, newShortUrl, copyState: false}
           props.setShortUrlList([
             ...props.shortUrlList, newShortUrlObj
           ])

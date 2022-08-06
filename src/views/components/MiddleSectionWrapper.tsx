@@ -8,6 +8,7 @@ import "../styles/middleSectionWrapper.css";
 type ShortUrlListObj = {
   newLongUrl: string
   newShortUrl: string
+  copyState: boolean
 }
 
 interface MiddleSectionWrapperProps {
@@ -33,7 +34,7 @@ const MiddleSectionWrapper: React.FC<MiddleSectionWrapperProps> = (
       />
       <div className="middle-section-wrapper-div">
         <ShortenUrlInput setLongURL={props.setLongURL} setShortenButtonClicked={setShortenButtonClicked} />
-        <ShoortenUrlLists shortUrlList={props.shortUrlList} />
+        <ShoortenUrlLists shortUrlList={props.shortUrlList} setShortUrlList={props.setShortUrlList} />
       </div>
 
       <AdvancedStatistics />
