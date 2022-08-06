@@ -20,14 +20,6 @@ const App = () => {
   // @ts-ignore
   const [shortUrlList, setShortUrlList] = useState<ShortUrlListObj[]>(storeShortUrlList)
 
-  // useEffect(() => {
-  //   const newShortUrlListData = window.localStorage.getItem("shortUrlList ")
-  //   if (newShortUrlListData) {
-  //     setShortUrlList(JSON.parse(newShortUrlListData))
-  //   }
-    
-  // }, [])
-
   useEffect(() => {
     window.localStorage.setItem(
       "shortUrlList", 
