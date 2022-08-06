@@ -54,6 +54,8 @@ const ShortenUrlData: React.FC<ShortenUrlDataProps> = (
         })
         .catch((error: String) => {
           console.log(error);
+          const inputErrorDiv = document.getElementById("inputError")!;
+          inputErrorDiv.innerHTML = "Sorry, Please enter a valid URL...";
           props.setFetching(false)
         })
     }

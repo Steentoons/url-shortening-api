@@ -43,7 +43,7 @@ const shortenUrlHandler = (setShortenButtonClicked: any, setLongURL: any): void 
   const myInputVal: string = myInput.value;
 
   if (myInputVal === "") {
-    inputErrorDiv.innerHTML = "Sorry, enter your url first...";
+    inputErrorDiv.innerHTML = "Sorry, enter your URL first...";
 
     return;
   } else {
