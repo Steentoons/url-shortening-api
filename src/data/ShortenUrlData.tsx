@@ -16,6 +16,7 @@ interface ShortenUrlDataProps {
   setLongURL: React.Dispatch<React.SetStateAction<string>>
   shortenButtonClicked: boolean
   setShortenButtonClicked: React.Dispatch<React.SetStateAction<boolean>>
+  setFetching: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 type ResponseShortLink = {
@@ -36,8 +37,8 @@ const ShortenUrlData: React.FC<ShortenUrlDataProps> = (
 ) => {
   useEffect(() => {
     if (props.shortenButtonClicked) {
-      console.log("state change detected on click?" + props.shortenButtonClicked)
       const newURL = "https://api.shrtco.de/v2/shorten?url=" + props.longURL;
+      props.setFetching(true)
       axios
         .get(newURL)
         .then((response: ResponseData) => {
@@ -49,9 +50,11 @@ const ShortenUrlData: React.FC<ShortenUrlDataProps> = (
           props.setShortUrlList([
             ...props.shortUrlList, newShortUrlObj
           ])
+          props.setFetching(false)
         })
         .catch((error: String) => {
           console.log(error);
+          props.setFetching(false)
         })
     }
 

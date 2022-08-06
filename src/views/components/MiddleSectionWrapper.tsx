@@ -21,7 +21,10 @@ interface MiddleSectionWrapperProps {
 const MiddleSectionWrapper: React.FC<MiddleSectionWrapperProps> = (
   props: MiddleSectionWrapperProps
 ) => {
+
   const [shortenButtonClicked, setShortenButtonClicked] = useState(false);
+  const [fetching, setFetching] = useState<boolean>(false)
+
   return (
     <div className="middle-section-wrapper-container">
       <ShortenUrlData
@@ -31,9 +34,10 @@ const MiddleSectionWrapper: React.FC<MiddleSectionWrapperProps> = (
         setLongURL={props.setLongURL}
         shortenButtonClicked={shortenButtonClicked}
         setShortenButtonClicked={setShortenButtonClicked}
+        setFetching={setFetching}
       />
       <div className="middle-section-wrapper-div">
-        <ShortenUrlInput setLongURL={props.setLongURL} setShortenButtonClicked={setShortenButtonClicked} />
+        <ShortenUrlInput setLongURL={props.setLongURL} setShortenButtonClicked={setShortenButtonClicked} fetching={fetching} />
         <ShoortenUrlLists shortUrlList={props.shortUrlList} setShortUrlList={props.setShortUrlList} />
       </div>
 

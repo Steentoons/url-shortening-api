@@ -6,6 +6,7 @@ import "../styles/shortenUrlInput.css";
 interface ShortenUrlInputProps {
   setLongURL: React.Dispatch<React.SetStateAction<string>>;
   setShortenButtonClicked: React.Dispatch<React.SetStateAction<boolean>>
+  fetching: boolean
 }
 
 // ShortenUrlInput Component...
@@ -26,7 +27,7 @@ const ShortenUrlInput: React.FC<ShortenUrlInputProps> = (
           onClick={() => shortenUrlHandler(props.setShortenButtonClicked, props.setLongURL)}
           className="shorten-url-input-button-wrapper"
         >
-          <Button content="Shorten It!" background={true} />
+          <Button content= {props.fetching ? "Shortening..." :"Shorten It!"} background={true} />
         </div>
       </div>
     </div>
