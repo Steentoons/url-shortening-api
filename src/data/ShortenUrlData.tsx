@@ -36,7 +36,9 @@ const ShortenUrlData: React.FC<ShortenUrlDataProps> = (
   props: ShortenUrlDataProps
 ) => {
   useEffect(() => {
-    if (props.shortenButtonClicked) {
+
+    // Fetching the API...
+    const fetchData = () => {
       const newURL = "https://api.shrtco.de/v2/shorten?url=" + props.longURL;
       props.setFetching(true)
       axios
@@ -58,6 +60,10 @@ const ShortenUrlData: React.FC<ShortenUrlDataProps> = (
           inputErrorDiv.innerHTML = "Sorry, Please enter a valid URL...";
           props.setFetching(false)
         })
+    }
+
+    if (props.shortenButtonClicked) {
+      fetchData()
     }
 
     return (
