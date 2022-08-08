@@ -1,10 +1,10 @@
 .more-than-links-container {
-    width: 100%;
+    width: 100vw;
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
     padding-left: 140px;
-    /* background: red; */
+    overflow-x: hidden;
 }
 
 .more-than-links-content-button {
