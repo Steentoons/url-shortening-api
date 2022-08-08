@@ -16,16 +16,16 @@ const App = () => {
   const [longURL, setLongURL] = useState<string>("")
   
   // @ts-ignore
-  const storeShortUrlList = JSON.parse(localStorage.getItem("shortUrlList") || [])
+  // const storeShortUrlList = JSON.parse(localStorage.getItem("shortUrlList") || [])
   // @ts-ignore
-  const [shortUrlList, setShortUrlList] = useState<ShortUrlListObj[]>(storeShortUrlList)
+  const [shortUrlList, setShortUrlList] = useState<ShortUrlListObj[]>([])
 
-  useEffect(() => {
-    window.localStorage.setItem(
-      "shortUrlList", 
-      JSON.stringify(shortUrlList)
-    );
-  });
+  // useEffect(() => {
+  //   window.localStorage.setItem(
+  //     "shortUrlList", 
+  //     JSON.stringify(shortUrlList)
+  //   );
+  // });
 
   return <div className='shorten-url-app-container'>
     <Header />
