@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor Solution](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://url-shortening-api-sable.vercel.app/)
+- Live Site URL: [Live Site]([https://url-shortening-api-sable.vercel.app/](https://steentoons-url-shortener.vercel.app/))
 
 ## My process
 I actually started off without any CSS, no aesthetics. Setting up my file system depending on the problem and building myself on top of that. I did the HTML and Javascript first, made sure all the functionalities are working fine. After the project was fully functional without CSS, I then refactored my code to be more readable before adding CSS with a desktop-first approach.
